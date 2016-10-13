@@ -31,7 +31,7 @@ public class SynTest {
 	 * @throws  
 	 */
 	public static void main(String[] args) {
-		System.out.println("主线程开始");
+		System.out.println("-----主线程开始-----");
 		final CountDownLatch syn=new CountDownLatch(2);
 		new Thread(new Runnable(){
 
