@@ -11,6 +11,8 @@
  */
 package com.test;
 
+import java.util.Random;
+
 /**
  * @ClassName: HeapSort
  * @Description: TODO
@@ -45,15 +47,28 @@ public class HeapSort {
 	}
 
 	public static void main(String[] args) {
-		int[] data = new int[] { 3, 1, 5, 9, 10, 4, 5, 2 };
-		int len = data.length;
-		while (len > 0) {
-			buildMaxHeap(data, len);
-			int tmp = data[0];
-			data[0] = data[len-1];
-			data[len-1] = tmp;
-			len--;
+		int[] data = new int[100000000];
+		for (int i = 0; i < 100000000; i++) {
+			data[i] = new Random().nextInt(100000000);
 		}
-		System.out.println(data);
+		int len = data.length;
+		int i = 0;
+		// System.out.println(System.currentTimeMillis());
+		while (len > 0) {
+			if (i == 0)
+				System.out.println(System.currentTimeMillis());
+			buildMaxHeap(data, len);
+			if (i == 10)
+				System.out.println(System.currentTimeMillis());
+			int tmp = data[0];
+			data[0] = data[len - 1];
+			data[len - 1] = tmp;
+			len--;
+			i++;
+		}
+		// System.out.println(System.currentTimeMillis());
+		// for (int i = 0; i < 100; i++) {
+		// System.out.println(data[i]);
+		// }
 	}
 }

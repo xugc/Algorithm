@@ -17,6 +17,15 @@ package parent.child;
  * 
  */
 public class TestExp {
+	static{
+		i=3;
+	}
+	static int i=2;
+	public TestExp(){
+		i=4;
+		System.out.println(i);
+	}
+	
 
 	public void printName(Exception e) {
 		System.out.println(e.getClass().getName());
@@ -31,9 +40,45 @@ public class TestExp {
 	 * @throws
 	 */
 	public static void main(String[] args) {
-		ChildException ce = new ChildException();
-		TestExp te = new TestExp();
-		te.printName(ce);
+//		ParentTest pt=new ParentTest();
+//		System.out.println(pt.e.getE());
+//		ChildTest ct=new ChildTest();
+//		System.out.println(ParentTest.e.hashCode());
+		System.out.println(ChildTest.e==ParentTest.e);
+//		ChildException ce = new ChildException();
+//		TestExp te = new TestExp();
+//		te.printName(ce);
+//		
+//		new Thread(new Runnable(){
+//
+//			@Override
+//			public void run() {
+//				System.out.println("m");
+//				new Thread(new Runnable(){
+//
+//					@Override
+//					public void run() {
+//						System.out.println("s");
+//						try {
+//							Thread.currentThread().sleep(5000);
+//						} catch (InterruptedException e) {
+//							// TODO Auto-generated catch block
+//							e.printStackTrace();
+//						}
+//						System.out.println("s end");
+//					}
+//					
+//				}).start();
+//				try {
+//					Thread.currentThread().sleep(2000);
+//				} catch (InterruptedException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//				System.out.println("m end");
+//			}
+//			
+//		}).start();
 
 	}
 
