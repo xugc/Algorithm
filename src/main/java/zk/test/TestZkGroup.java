@@ -143,7 +143,7 @@ public class TestZkGroup implements Watcher {
 	}
 
 	public static void main(String[] args) throws Exception {
-		String hosts = "192.168.108.132";
+		String hosts = "10.103.14.22";
 		String groupname = "zktest";
 		String meberName = String.valueOf(System.currentTimeMillis());
 		String path = "/" + groupname;
