@@ -48,13 +48,13 @@ public class SynTest {
 			@Override
 			public void run() {
 				System.out.println("执行第二组线程");
+				syn.countDown();
 				try {
 					Thread.sleep(3000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				syn.countDown();
 				System.out.println("执行第二组线程结束");
 			}
 			
