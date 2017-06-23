@@ -23,7 +23,7 @@ public class TestSyn {
 	public synchronized void synM1() {
 		System.out.println("1");
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
