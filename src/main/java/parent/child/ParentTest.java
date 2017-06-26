@@ -18,7 +18,7 @@ package parent.child;
  */
 public class ParentTest {
 	static{
-		System.out.println("pt init");
+		System.out.println("pt init master");
 	}
 	public static ChildException e=new ChildException("abc");
 }
