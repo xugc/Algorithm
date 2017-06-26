@@ -18,7 +18,7 @@ package parent.child;
  */
 public class ParentTest {
 	static{
-		System.out.println("pt init dev");
+		System.out.println("pt init dev release 4");
 	}
 	public static ChildException e=new ChildException("abc");
 }
