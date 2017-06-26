@@ -26,7 +26,7 @@ public class Test {
 	 * @throws  
 	 */
 	public static void main(String[] args) {
-		System.out.println("master");
+		System.out.println("new feature dev");
 	}
 
 }
