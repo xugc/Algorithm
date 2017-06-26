@@ -18,7 +18,6 @@ package parent.child;
  */
 public class ChildTest extends ParentTest {
 	static{
-		System.out.println("ct init kkkk");
-		System.out.println("ct init bug");
+		System.out.println("ct init master test");
 	}
 }
