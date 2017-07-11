@@ -84,8 +84,6 @@ public class FiveThinker implements Runnable {
 				Thread.sleep(5000);
 				right.takeUp();
 			} catch (InterruptedException e) {
-				right.putDown();
-				left.putDown();
 			} finally {
 				lock.unlock();
 			}
@@ -183,19 +181,20 @@ public class FiveThinker implements Runnable {
 
 		@Override
 		public void run() {
-			try {
-				// lock.lock();
-				lock.lockInterruptibly();
-				System.out
-						.println(Thread.currentThread().getName() + "running");
-				Thread.sleep(5000);
-				System.out.println(Thread.currentThread().getName()
-						+ "finished");
-			} catch (InterruptedException e) {
-				System.out.println(Thread.currentThread().getName() + "被打断");
-			} finally {
-				lock.unlock();
-			}
+				try {
+//					 lock.lock();
+					lock.lockInterruptibly();
+					System.out.println(Thread.currentThread().getName()
+							+ "running");
+					Thread.sleep(5000);
+					System.out.println(Thread.currentThread().getName()
+							+ "finished");
+				} catch (InterruptedException e) {
+					System.out
+							.println(Thread.currentThread().getName() + "被打断");
+				} finally {
+					lock.unlock();
+				}
 		}
 	}
 }
