@@ -35,7 +35,7 @@ public class FastSort {
 		data[i] = tmp;
 		return i;
 	}
-
+ 
 	public static void merge(int data[], int start, int end) {
 		if (start < end) {
 			int center = quickSort(data, start, end);
