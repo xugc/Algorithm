@@ -48,5 +48,6 @@ public class FastSort {
 		int[] data = new int[] { 3, 1, 5, 9, 10, 4, 5, 2 };
 		merge(data, 0, data.length-1);
 		System.out.println(data);
+		System.out.println("12212");
 	}
 }
