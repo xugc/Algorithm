@@ -27,8 +27,6 @@ import java.util.concurrent.TimeoutException;
 public class ThreadPoolTimeout {
 	private static class Test {
 		private String tt;
-		
-		public static String s=null;
 
 		public String getTt() {
 			return tt;
@@ -46,8 +44,6 @@ public class ThreadPoolTimeout {
 	}
 
 	public static void main(String[] args) {
-		Test t=new Test();
-		System.out.println(t.s);
 		ExecutorService executor = Executors.newSingleThreadExecutor();
 		Future<Test> result = executor.submit(new Callable<Test>() {
 
